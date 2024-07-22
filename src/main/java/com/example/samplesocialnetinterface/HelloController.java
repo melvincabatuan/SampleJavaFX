@@ -14,7 +14,7 @@ public class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<String> animals =
                 FXCollections.observableArrayList("Jose Rizal", "Andres Bonifacio", "Bill Gates",
-                        "Elon Musk", "Donald Trum", "Joe Biden");
+                        "Elon Musk", "Donald Trump", "Joe Biden");
         listView.setItems(animals);
     }
 
