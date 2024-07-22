@@ -6,12 +6,16 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class HelloController {
+    
     @FXML
-    private Label welcomeText;
+    private ListView<String> listView;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> animals =
+                FXCollections.observableArrayList("Jose Rizal", "Andres Bonifacio", "Bill Gates",
+                        "Elon Musk", "Donald Trum", "Joe Biden");
+        listView.setItems(animals);
     }
 
     public void handleStatus(ActionEvent actionEvent) {
